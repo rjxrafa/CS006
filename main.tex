@@ -1,0 +1,142 @@
+\usepackage[utf8]{inputenc}
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{graphicx} 
+
+\title{HW2 - CS006}
+\author{Rafael Betita}
+\date{March 2019}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\begin{enumerate}
+    \item \text{Prove the following theorems algebraically:}
+    \begin{enumerate}
+        \item 
+            \begin{align*}
+            X(X'+Y)&=XY\\
+            XX'+XY&=XY\\
+            0+XY&=XY
+            \end{align*}
+        \item
+            \begin{align*}
+                X+XY&=X\\
+                X(1+Y)&=X\\
+                X(1)&=X
+            \end{align*}
+        \item
+            \begin{align*}
+                XY+XY'&=X\\
+                X(Y+Y')&=X\\
+                X(1)&=X
+            \end{align*}
+        \item
+            \begin{align*}
+                (A+B)(A+B')&=A\\
+                AA+AB'+BA+BB'&=A\\
+                A+AB'+AB&=A\\
+                A+A(B+B')&=A\\
+                A+A&=A\\
+                A&=A
+            \end{align*}
+    \end{enumerate}
+    \newpage\addtocounter{enumi}{1}\item Simplify each of the following expressions by applying one of the theorems. State the theorem used.
+        \begin{enumerate}
+            \item X'Y'Z+(X'Y'Z)' = 1 
+            \\\text{Uniting Theorems}\\
+            \item (AB'+CD)(B'E+CD) = CD+AB'B'E = CD+AB'E
+            \\\text{Distributive Laws}\\
+            \item (ACF+AC'F) = AF
+            \\\text{Uniting Theorem}\\
+            \item A(C+D'B)+A' = A'+(C+D'B)
+            \\\text{Elimination Theorem}\\
+            \item (A'B+C+D)(A'B+D) = A'B+D
+            \\\text{Absorption Theorem}\\
+            
+            \item (A+BC)+(DE+F)(A+BC)'=(A+BC)+(DE+F)
+            \\\text{Elmination Theorem}
+        \end{enumerate}
+    \addtocounter{enumi}{1}\item Multiply out and simplify to obtain a sum of products:
+        \begin{enumerate}
+            \item (A+B)(C+B)(D'+B)(ACD'+E)
+            \begin{align*}
+                (AC+B)(D'+B)(ACD'+E) && \text{Distributive Law}\\
+                (B+ACD')(ACD'+E)&& \text{Distributive Law}\\
+                BE+ACD' && \text{Distributive Law}
+            \end{align*}
+            \item  (A'+B+C')(A'+C'+D)(B'+D')
+            \begin{align*}
+                (A'+C'+BD)(B'+D') && \text{Distributive Law}\\
+                A'B'+A'D'+C'B'+C'D'+BB'D+BDD'\\
+                A'B'+A'D'+C'B'+C'D'\\
+            \end{align*}
+        \end{enumerate}
+    \newpage\addtocounter{enumi}{1}\item Draw a circuit that uses only one AND gate and one OR gate to realize each of the following functions:
+        \begin{enumerate}
+            \item (A+B+C+D)(A+B+C+E)(A+B+C+F) = (A+B+C+DEF)
+            \item (WXYZ+VXYZ+UXYZ) = XYZ(W+V+U)
+        \end{enumerate}
+    \addtocounter{enumi}{1}\item Find F and G and simplify
+    \begin{enumerate}
+        \item F = ((A+B)'+((A+(A+B)')')((A+(A+B)')')
+        \begin{align*}
+            (A+(A+B)')' &\text{ Absorption Theorem}\\
+            (A+A'B')' &\text{ DeMorgan's Law}\\
+            (A+B')' = A'B &\text{ DeMorgan's Law}
+        \end{align*}
+        \item G = (((R+S+T)'(P)((R+S)'(T)))'(T))'
+        \begin{align*}
+            (R+S+T)'(PT)(R+S)'+T' &\text{ DeMorgan's Law}\\
+            (R+S+T)'(PT)(R+S)'+T' &\text{ DeMorgan's Law}\\            (R'S'T')(PT)(R'S')+T' &\text{ DeMorgan's Law}\\
+            0+T' = T'
+        \end{align*}
+    \end{enumerate}
+    \addtocounter{enumi}{1}\item Simplify each of the following expressions by applying one of the theorems. State the theorem used.
+    \begin{enumerate}
+        \item (A'+B'+C)(A'+B'+C)' = 0\\\text{Complementarity Law}
+        \item AB(C'+D)+B(C'+D) = B(C'+D)\\\text{ Absorption Theorem}
+        \item AB+(C'+D)(AB)' = AB+(C'+D)\\\text{ Elimination Theorem}
+        \item (A'BF+CD')(A'BF+CEG) = A'BF+CEGCD' = A'BF+CEGD'\\\text{ Elimination Theorem}
+        \item ([AB'+(C+D)'+E'F](C+D)) = AB'(C+D)+0+E'F(C+D)
+        \\\text{Distributive Law}
+        \item A'(B+C)(D'E+F)'+(D'E+F) = (D'E+F)+A'(B+C)
+        \\\text{ Elimination Theorem}
+    \end{enumerate}
+    \newpage\addtocounter{enumi}{1}\item
+    \begin{enumerate}
+        \item 
+        \begin{align*}
+         F_1&=A'A+B+(B+B)\\
+         &=B
+        \end{align*}
+        \item
+        \begin{align*}
+            F_2 &= A'A'+AB'\\
+            &= A'+AB'\\
+            &= A'+B'
+        \end{align*}
+        \item
+        \begin{align*}
+            F_3 &= ((AB+C)'D)((AB+C)+D)\\
+            &= ((AB+C)'D)(AB+C)+D((AB+C)'D)\\
+            &= ((AB+C)'D)
+        \end{align*}
+        \item
+        \begin{align*}
+            Z &=((A+B)C)'+(A+B)CD\\
+            &= ((A+B)C)' + D\\
+            &= (A+B)'+C'+D\\
+            &= A'B'+C'+D
+        \end{align*}
+    \end{enumerate}
+    \addtocounter{enumi}{1}\item Use only DeMorgan's relationships and Involution to find the complements of the following functions:
+\end{enumerate}
+
+\end{document}
