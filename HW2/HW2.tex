@@ -156,6 +156,52 @@
         \end{align*}
     \end{enumerate}
       \addtocounter{enumi}{1}\item For the following switching circuit, find the logic function expression describing the circuit by the three methods indicated, simplify each expression and show they are equal. 
+      \begin{enumerate}
+          \item subdividing it into series and parallel connections of subcircuits until single switches are obtained
+          \begin{align*}
+            a &= (C(A'+B'))+(A(B+C'))\\
+            &= CA'+B'C+AB+AC'\\
+            &= (A'C + AC') + B'C + AB\\
+            &= (A'C + AC') + (B'+A)(B+C)
+          \end{align*}
+          \item finding all paths through the circuit (sometimes called tie sets), forming an AND term for each path and ORing the AND terms together
+          \begin{align*}
+            b &= (A'C)+(B'C)+(AB)+(AC')
+          \end{align*}
+          \item finding all ways of breaking all paths through the circuit (sometimes called cut sets), forming an OR term for each cut set and ANDing the OR terms together
+          \begin{align*}
+              c&=(A'+B'+A)(A+C)(A'+B'+C'+B)(B+C+C')\\
+              &= (1)(A+C)(1)(1)\\
+              &= (A+C)
+          \end{align*}
+      \end{enumerate}
+      \newpage\addtocounter{enumi}{1}\item Construct a gate using AND, OR and NOT gates that corresponds one to one with the following switching algebra expression. Assume that inputs are available only in uncomplemented form. (Do not change the expression.)
+      \[(WX'+Y)[(W+Z)'+(XYZ')]\]
+    \addtocounter{enumi}{1}\item In the following circuit, F = (A'+B)C. Give a truth table for G so that H is as specified in its truth table. If G can be either 0 or 1 for some input combination, leave its value unspecified.
+     \addtocounter{enumi}{1}\item Factor each of the following expressions to obtain a product of sums:
+     \begin{enumerate}
+         \item W+U'YV
+         \item TW+UY'+V
+         \item A'B'C+B'CD'+B'E'
+         \item ABC+ADE'+ABF'
+     \end{enumerate}
+     \addtocounter{enumi}{1}\item For each of the following functions find a sum-of-products expression for F'.
+     \begin{enumerate}
+         \item F(P,Q,R,S) = (R'+PQ)S
+         \item F(W,X,Y,Z) = X+YZ(W+X')
+         \item F(A,B,C,D) = A'+B'+ACD
+     \end{enumerate}
+     \addtocounter{enumi}{1}\item Draw a circuit that uses two OR gates and two AND gates to realize the following function:
+        \[F=(V+W+X)(V+X+Y)(V+Z)\]
+    \addtocounter{enumi}{1}\item Prove the following equations using truth tables:
+    \begin{enumerate}
+        \item (X+Y)(X'+Z)=XZ+X'Y
+        \item (X+Y)(Y+Z)(X'+Z)=(X+Y)(X'+Z)
+        \item XY+YZ+X'Z=XY+X'Z
+        \item (A+C)(AB+C')=AB+AC'
+        \item W'XY+WZ=(W'+Z)(W+XY)
+    \end{enumerate}
+      
 \end{enumerate}
 
 \end{document}
