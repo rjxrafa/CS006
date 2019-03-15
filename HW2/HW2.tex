@@ -137,6 +137,25 @@
         \end{align*}
     \end{enumerate}
     \addtocounter{enumi}{1}\item Use only DeMorgan's relationships and Involution to find the complements of the following functions:
+    \begin{enumerate}
+        \item f(A,B,C,D) = [A+(BCD)'][(AD)'+B(C'+A)]
+        \begin{align*}
+            f' &= [A+B'+C'+D']'+[(A'+D')+B(C'+A)]'\\
+            &= A'BCD+(A'+D')'(B(C'+A))'\\
+            &= A'BCD+(AD)(B'+(C'+A)')\\
+            &= A'BCD+(AD)(B'+CA')\\
+            &= A'BCD+AB'D
+        \end{align*}
+        \item f(A,B,C,D) = AB'C+(A'+B+D)(ABD'+B')
+        \begin{align*}
+            f' &=  (AB'C+(A'+B+D)(ABD'+B'))'\\
+            &=  ((AB'C)'((A'+B+D)(ABD'+B'))')\\
+            &=  ((A'+B''+C')((A'+B+D)'+(ABD'+B')'))\\
+            &=  ((A'+B+C')((A''B'+D')+((ABD')'(B''))))\\
+            &=  ((A'+B+C')((A''B'+D')+((A'+B'+D)(B)))\\
+        \end{align*}
+    \end{enumerate}
+      \addtocounter{enumi}{1}\item For the following switching circuit, find the logic function expression describing the circuit by the three methods indicated, simplify each expression and show they are equal. 
 \end{enumerate}
 
 \end{document}
