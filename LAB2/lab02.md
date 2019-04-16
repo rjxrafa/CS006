@@ -1,0 +1,2 @@
+
+Design a logic circuit, using the software provided, to automatically operate a car alarm. The manual for the alarm gives the following explanation for its operation: " The alarm system will go off if the alarm is activated and any of the two doors are open or the trunk is open, or if the vibration sensor is activated and the key is not in the ignition"
